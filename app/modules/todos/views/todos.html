@@ -1,0 +1,13 @@
+<form ng-submit="todosCtrl.addTodo()">
+  <input type="text" placeholder="What to do?" ng-model="todosCtrl.newTodo">
+  <input type="submit" ng-value="todosCtrl.buttonText">
+</form>
+
+<h1>Todos for {{ todosCtrl.student }} ({{ todosCtrl.todoCount() }})</h1>
+<ul>
+  <li ng-repeat="todo in todosCtrl.todos"
+      ng-class="{ 'completed': todo.completed }">
+    <span ng-click="todosCtrl.toggleCompleted(todo)">{{ todo.item }}</span>
+    <i class="fa fa-times-circle" ng-click="todosCtrl.deleteTodo(todo)"></i>
+  </li>
+</ul>

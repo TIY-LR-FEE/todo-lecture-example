@@ -1,0 +1,13 @@
+<h1>New List</h1>
+<form ng-submit="listCtrl.redirectToList()">
+  <input type="text" placeholder="Student Name" ng-model="listCtrl.newListName">
+  <input type="submit" value="Add">
+</form>
+
+<h1>Todo Lists</h1>
+
+<ul>
+  <li ng-repeat="student in listCtrl.students">
+    <a ui-sref="todos({ student: student})">{{ student }}</a>
+  </li>
+</ul>

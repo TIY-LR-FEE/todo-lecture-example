@@ -1,0 +1,12 @@
+#todos .completed {
+  text-decoration: line-through; }
+
+#todos .completed {
+  text-decoration: line-through; }
+
+* {
+  outline: none; }
+
+.completed {
+  text-decoration: line-through;
+  color: #ccc; }
